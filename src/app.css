@@ -1,0 +1,213 @@
+@import 'tailwindcss';
+@plugin 'daisyui';
+
+/** Daisyui overrides **/
+
+@utility btn {
+	@apply border-0 shadow-none outline-none;
+	&:not(.join-item) {
+		@apply rounded-full;
+	}
+	&.join-item {
+		@apply px-4;
+		height: calc(var(--size) + (0.25rem * 2));
+		--radius-field: 100px;
+	}
+}
+
+@utility menu {
+	& :where(li:not(.menu-title) > :not(ul, details, .menu-title, .btn)),
+	& :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
+		@apply rounded-full;
+		&a:hover {
+			background: color-mix(in oklab, var(--color-base-200), #000 7%);
+		}
+	}
+}
+
+@utility stat {
+	border-block-end: initial !important;
+	border-inline-end: initial !important;
+	@apply !flex w-full items-center sm:gap-8;
+	@apply rounded-xl bg-base-100 !px-2 sm:!px-6;
+	&:is(a):hover {
+		@apply bg-base-300;
+	}
+
+	.stat-value {
+		font-size: clamp(24px, 4vw, 32px);
+	}
+
+	& > svg {
+		min-width: 50px;
+	}
+
+	.content {
+		@apply flex flex-1 flex-col;
+	}
+}
+
+@utility input {
+	@apply !rounded-lg !border-0 !shadow-none !outline-0;
+	@apply !rounded-lg !bg-base-200;
+	&:active,
+	&:focus,
+	&:focus-within,
+	&:focus-visible {
+		--input-color: color-mix(in oklab, var(--color-base-content) 60%, #0000);
+	}
+}
+@utility select {
+	@apply input;
+}
+
+@utility input-prefix {
+	@apply flex min-w-1/2 items-center p-2 px-4 sm:min-w-46;
+}
+
+@utility textarea {
+	@apply rounded-lg !border-0 !shadow-none !outline-0;
+	white-space: pre;
+	min-height: 140px;
+}
+
+@utility modal {
+	.modal-box {
+		@apply rounded-2xl bg-base-200 p-2;
+	}
+}
+
+@utility badge {
+	&:has(.clipboard-copy-btn) {
+		@apply pr-0.5;
+		span {
+			@apply overflow-hidden text-ellipsis whitespace-nowrap;
+		}
+		.clipboard-copy-btn {
+			@apply p-1;
+			.btn {
+				@apply !rounded-sm;
+				@apply bg-base-200;
+				&:hover {
+					@apply bg-base-100;
+				}
+			}
+		}
+	}
+}
+
+/** Custom utils **/
+
+@utility page-content {
+	@apply container mx-auto flex flex-col gap-2 rounded-2xl bg-base-200 p-2;
+
+	.content {
+		@apply flex flex-col gap-2 rounded-2xl;
+	}
+
+	.section {
+		@apply flex flex-col rounded-xl bg-base-100 p-2;
+		&:empty {
+			@apply !hidden;
+		}
+		> .title {
+			@apply flex items-center gap-4 p-2 pl-4 text-xl font-medium;
+		}
+		.row {
+			@apply flex gap-2 rounded-xl sm:p-2 sm:px-4 md:items-center;
+			@apply flex-col md:flex-row;
+			.label {
+				@apply ml-2 min-w-42 sm:ml-0;
+			}
+			.value {
+				@apply badge h-auto min-h-10 bg-base-200 badge-lg;
+				@apply max-w-full leading-4;
+				&:is(a, button):hover {
+					@apply bg-base-300;
+				}
+			}
+
+			&:not(:first-child) {
+				.label {
+					@apply mt-2 sm:mt-0;
+				}
+			}
+		}
+	}
+	.content {
+		@apply flex-1;
+	}
+}
+
+@utility home-list {
+	@apply flex flex-1 flex-col rounded-xl;
+	@apply sm:p-2;
+	@apply sm:bg-base-100;
+	@apply gap-2 sm:gap-0;
+
+	> .list-item {
+		.icon + * {
+			@apply w-1/2;
+		}
+	}
+}
+
+@utility list {
+	@apply page-content gap-2;
+
+	.header,
+	.footer {
+		@apply flex flex-wrap items-center gap-2 rounded-xl bg-base-100 p-2 px-4;
+	}
+	> .content {
+		@apply home-list overflow-auto;
+	}
+}
+
+@utility list-item {
+	@apply relative !flex flex-row items-center p-2;
+	@apply rounded-xl bg-base-100 transition-all;
+	list-style-type: none;
+
+	@apply gap-x-2 gap-y-2 sm:gap-x-4;
+	@apply bg-base-100 sm:bg-transparent;
+	@apply flex-wrap sm:flex-nowrap;
+
+	.icon {
+		@apply flex items-center justify-center rounded-xl bg-base-200 p-4;
+		@apply border-2 border-transparent transition-all;
+	}
+	.badge {
+		@apply !h-auto badge-lg;
+		@apply h-full bg-base-200 badge-lg;
+		@apply overflow-hidden text-ellipsis whitespace-nowrap;
+	}
+	.badge,
+	.value {
+		@apply px-2;
+		@apply w-[calc(50%-0.25rem)] sm:w-auto;
+	}
+
+	.clipboard-copy-btn {
+		@apply w-full sm:w-auto;
+		@apply px-4 sm:px-0;
+		span {
+			@apply w-full sm:w-auto;
+		}
+	}
+	.mr-auto,
+	.badge + .icon {
+		@apply hidden sm:flex;
+	}
+
+	&:not(.empty) {
+		&:hover,
+		&.active {
+			@apply bg-base-200;
+			.icon,
+			.badge {
+				@apply bg-base-100;
+			}
+		}
+	}
+}
