@@ -29,7 +29,7 @@
 {#if visible}
 	<div class="first-visit-banner">
 		<div class="banner-content">
-			<img src="/loading.gif" alt="Loading Martian Chain" />
+			<img src="/og_image.png" alt="Loading Martian Chain" />
 			<div class="message">
 				<h2>Welcome to <strong>MartianScan</strong></h2>
 				<p>Your Martian Chain explorer is spinning up.</p>
