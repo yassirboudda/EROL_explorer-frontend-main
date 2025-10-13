@@ -14,10 +14,10 @@
 </script>
 
 <svelte:head>
-	<title>ErolScan Martian Blockchain Explorer</title>
+	<title>MartianScan | Martian Chain Explorer</title>
 	<meta
 		name="description"
-		content="Explore Martian Chain blocks, transactions, and contracts with ErolScan—built by the AMI Team for the $EROL ecosystem."
+		content="Explore Martian Chain blocks, transactions, and smart contracts with MartianScan—your real-time window into the $EROL ecosystem."
 	/>
 </svelte:head>
 

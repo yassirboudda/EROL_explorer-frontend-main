@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	const STORAGE_KEY = 'erolscan:first-visit-dismissed';
+	const STORAGE_KEY = 'martianscan:first-visit-dismissed';
 	let visible = false;
 	let timeoutId: NodeJS.Timeout | null = null;
 
@@ -31,8 +31,8 @@
 		<div class="banner-content">
 			<img src="/loading.gif" alt="Loading Martian Chain" />
 			<div class="message">
-				<h2>Welcome to <strong>ErolScan</strong></h2>
-				<p>The Martian Chain explorer is spinning up.</p>
+				<h2>Welcome to <strong>MartianScan</strong></h2>
+				<p>Your Martian Chain explorer is spinning up.</p>
 				<p class="hint">Fetching the latest $EROL blocks—hang tight!</p>
 			</div>
 			<button class="btn btn-outline" on:click={dismiss}>Enter explorer</button>

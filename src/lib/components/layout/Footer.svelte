@@ -30,13 +30,13 @@
 	<div class="footer__top">
 		<div class="footer__brand">
 			<div class="footer__logo">
-				<img src="/ErolScanLogo.png" alt="ErolScan logo" />
+				<img src="/MartianScanLogo.png" alt="MartianScan logo" />
 				<div>
-					<h3>ErolScan</h3>
+					<h3>MartianScan</h3>
 					<p class="caption">Martian Chain explorer</p>
 				</div>
 			</div>
-			<p class="tagline">Discover blocks, transactions, and contracts across the $EROL ecosystem.</p>
+			<p class="tagline">MartianScan brings real-time visibility to blocks, transactions, and contracts across the $EROL ecosystem.</p>
 		</div>
 		<div class="footer__links">
 			<div>

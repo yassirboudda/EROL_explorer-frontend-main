@@ -4,11 +4,16 @@ import mongoose from 'mongoose';
 let connection: mongoose.Mongoose | null = null;
 
 export async function handle({ resolve, event }) {
-	// Database
+	const connectionString = DB_STRING as string | undefined;
+
+	if (!connectionString) {
+		return resolve(event);
+	}
+
 	if (!connection || connection.connection.readyState !== 1) {
 		try {
 			connection = (await mongoose.connect(
-				DB_STRING as string,
+				connectionString,
 				{
 					dbName: DB_NAME,
 					bufferCommands: false,
@@ -17,9 +22,9 @@ export async function handle({ resolve, event }) {
 				} as mongoose.ConnectOptions
 			)) as mongoose.Mongoose;
 		} catch (e) {
-			console.error('> Database error');
+			console.error('> Database connection failed (non-blocking)');
 			console.error(e);
-			throw new Error('Database connection failed');
+			return resolve(event);
 		}
 	}
 	return resolve(event);
