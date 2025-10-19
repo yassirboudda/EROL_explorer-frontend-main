@@ -7,8 +7,8 @@
 		<a href="/" class="flex items-center gap-4 rounded-xl p-2 pr-4 pl-3 hover:bg-base-300">
 			<img src="/MartianScanLogo.png" alt="MartianScan logo" height="42" width="42" />
 			<div class="flex flex-col leading-tight">
-				<span class="text-lg font-semibold">MartianScan</span>
-				<span class="text-xs text-base-content/70">Martian Chain Explorer</span>
+				<span class="text-lg font-semibold">Martian</span>
+				<span class="text-xs text-base-content/70">MartianChain Explorer</span>
 			</div>
 		</a>
 		<Searchbar class="ml-auto min-w-1/3" />
