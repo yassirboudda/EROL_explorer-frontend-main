@@ -8,7 +8,7 @@
 			<img src="/MartianScanLogo.png" alt="MartianScan logo" height="42" width="42" />
 			<div class="flex flex-col leading-tight">
 				<span class="text-lg font-semibold">Martian</span>
-				<span class="text-xs text-base-content/70">MartianChain Explorer</span>
+				<span class="text-xs text-base-content/70">Martianscan Explorer</span>
 			</div>
 		</a>
 		<Searchbar class="ml-auto min-w-1/3" />
