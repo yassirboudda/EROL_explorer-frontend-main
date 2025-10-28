@@ -8,6 +8,28 @@ for (const path in modules) {
   addMessages(lang, modules[path].default);
 }
 
+function getBrowserLanguage(): string | null {
+  if (!browser || !navigator) return null;
+  
+  // Check navigator.languages first (array of preferred languages)
+  const languages = navigator.languages || [navigator.language];
+  
+  // List of supported languages (from the translation files)
+  const supportedLanguages = Object.keys(modules).map(path => 
+    path.replace('./translations/', '').replace('.json', '')
+  );
+  
+  // Find the first supported language that matches
+  for (const lang of languages) {
+    const langCode = lang.split('-')[0]; // Get language code without region (e.g., 'en' from 'en-US')
+    if (supportedLanguages.includes(langCode)) {
+      return langCode;
+    }
+  }
+  
+  return null; // No supported language found
+}
+
 init({
   fallbackLocale: 'en',
   initialLocale: browser ? localStorage.getItem('language') || getBrowserLanguage() || 'en' : 'en',
