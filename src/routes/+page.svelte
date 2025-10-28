@@ -9,6 +9,7 @@
 	import MartianChainInfo from '$lib/components/home/MartianChainInfo.svelte';
 	import InfoIcon from 'virtual:icons/hugeicons/information-square'
 	import {isFullyIndexed} from "$lib/utils";
+	import { _ } from 'svelte-i18n';
 
 	export let data;
 </script>
@@ -43,7 +44,7 @@
 	</div>
 	<div class="container flex items-center !px-4">
 		<InfoIcon class="text-xl min-w-10" />
-		<span>This explorer is not fully indexed, which means the following lists may be outdated. However, you can always explore live data by searching for a transaction hash, address, etc.</span>
+		<span>{$_('home.indexingMessage')}</span>
 	</div>
 {/if}
 

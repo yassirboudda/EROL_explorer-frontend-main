@@ -4,6 +4,7 @@
 	import { page } from '$app/state';
 	import { ethers } from 'ethers';
 	import GasIcon from 'virtual:icons/hugeicons/fuel-station';
+	import { _ } from 'svelte-i18n';
 
 	let isLoading = true;
 	let gasPrice = 0;
@@ -31,7 +32,7 @@
 <div class="stat">
 	<GasIcon class="text-4xl" />
 	<div class="flex flex-col">
-		<div class="stat-title">Gas Price</div>
+		<div class="stat-title">{$_('home.gasPrice')}</div>
 		<div class="stat-value">
 			{#if isLoading}
 				<div class="h-12 w-42 max-w-full skeleton"></div>

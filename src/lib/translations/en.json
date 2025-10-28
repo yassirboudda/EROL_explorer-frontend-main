@@ -2,5 +2,45 @@
   "header": {
     "brand": "Martian",
     "subtitle": "Martianscan Explorer"
+  },
+  "home": {
+    "gasPrice": "Gas Price",
+    "chainId": "Chain ID",
+    "blocks": "Blocks",
+    "transactions": "Transactions",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "indexingMessage": "This explorer is not fully indexed, which means the following lists may be outdated. However, you can always explore live data by searching for a transaction hash, address, etc."
+  },
+  "languages": {
+    "en": "English",
+    "es": "Spanish",
+    "fr": "French",
+    "de": "German",
+    "it": "Italian",
+    "pt": "Portuguese",
+    "ru": "Russian",
+    "zh": "Chinese",
+    "ja": "Japanese",
+    "ko": "Korean",
+    "ar": "Arabic",
+    "hi": "Hindi",
+    "tr": "Turkish",
+    "vi": "Vietnamese",
+    "th": "Thai",
+    "id": "Indonesian",
+    "ms": "Malay",
+    "sw": "Swahili",
+    "zu": "Zulu",
+    "xh": "Xhosa",
+    "af": "Afrikaans",
+    "ha": "Hausa",
+    "yo": "Yoruba",
+    "ig": "Igbo",
+    "am": "Amharic",
+    "so": "Somali",
+    "ti": "Tigrinya",
+    "om": "Oromo",
+    "martian": "Martian"
   }
 }

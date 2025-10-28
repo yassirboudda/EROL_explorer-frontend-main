@@ -3,6 +3,7 @@
 	import { page } from '$app/state';
 	import { onMount } from 'svelte';
 	import LinkIcon from 'virtual:icons/hugeicons/link-04';
+	import { _ } from 'svelte-i18n';
 
 	let isLoading = true;
 	let chainId = 0;
@@ -12,12 +13,12 @@
 		isLoading = false;
 	});
 
-	let copyLabel = 'Copy';
+	let copyLabel = $_('home.copy');
 	const copy = () => {
 		navigator.clipboard.writeText(chainId.toString());
-		copyLabel = 'Copied!';
+		copyLabel = $_('home.copied');
 		setTimeout(() => {
-			copyLabel = 'Copy';
+			copyLabel = $_('home.copy');
 		}, 1000);
 	};
 </script>
@@ -25,7 +26,7 @@
 <div class="stat">
 	<LinkIcon class="text-4xl" />
 	<div class="flex flex-col">
-		<div class="stat-title">Chain ID</div>
+		<div class="stat-title">{$_('home.chainId')}</div>
 		<div class="stat-value">
 			{#if isLoading}
 				<div class="h-12 w-42 max-w-full skeleton"></div>
