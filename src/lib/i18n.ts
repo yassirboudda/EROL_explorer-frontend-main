@@ -10,7 +10,7 @@ for (const path in modules) {
 
 init({
   fallbackLocale: 'en',
-  initialLocale: browser ? localStorage.getItem('language') || 'en' : 'en',
+  initialLocale: browser ? localStorage.getItem('language') || getBrowserLanguage() || 'en' : 'en',
   handleMissingMessage: ({ locale, id }) => `${locale}: ${id}`
 });
 
