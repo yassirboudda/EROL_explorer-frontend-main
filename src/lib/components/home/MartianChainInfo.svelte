@@ -15,6 +15,7 @@
 		PUBLIC_MARTIAN_TWITTER,
 		PUBLIC_EROL_TWITTER
 	} from '$env/static/public';
+	import { _ } from 'svelte-i18n';
 
 	const formatNumber = (value?: string) => {
 		if (!value) return null;
@@ -22,23 +23,23 @@
 	};
 
 	const atAGlance = [
-		{ label: 'Chain Name', value: PUBLIC_CHAIN_NAME },
-		{ label: 'Chain ID', value: PUBLIC_CHAIN_ID },
-		{ label: 'Block Time', value: PUBLIC_CHAIN_BLOCK_TIME ? `${PUBLIC_CHAIN_BLOCK_TIME} seconds` : null },
-		{ label: 'Gas Limit', value: PUBLIC_CHAIN_GAS_LIMIT ? formatNumber(PUBLIC_CHAIN_GAS_LIMIT) : null },
-		{ label: 'Base Fee', value: PUBLIC_CHAIN_BASE_FEE ? `${PUBLIC_CHAIN_BASE_FEE} gwei` : null },
-		{ label: 'Native Token', value: PUBLIC_NATIVE_SYMBOL }
+		{ label: $_('chain.chainName'), value: PUBLIC_CHAIN_NAME },
+		{ label: $_('chain.chainId'), value: PUBLIC_CHAIN_ID },
+		{ label: $_('chain.blockTime'), value: PUBLIC_CHAIN_BLOCK_TIME ? `${PUBLIC_CHAIN_BLOCK_TIME} seconds` : null },
+		{ label: $_('chain.gasLimit'), value: PUBLIC_CHAIN_GAS_LIMIT ? formatNumber(PUBLIC_CHAIN_GAS_LIMIT) : null },
+		{ label: $_('chain.baseFee'), value: PUBLIC_CHAIN_BASE_FEE ? `${PUBLIC_CHAIN_BASE_FEE} gwei` : null },
+		{ label: $_('chain.nativeToken'), value: PUBLIC_NATIVE_SYMBOL }
 	];
 
 	const resourceLinks = [
-		{ label: 'Docs', href: PUBLIC_MARTIAN_DOCS },
-		{ label: 'Subnet Explorer', href: PUBLIC_MARTIAN_SUBNET },
-		{ label: 'MartianChain.com', href: PUBLIC_MARTIAN_SITE },
-		{ label: 'ErolMusk.com', href: PUBLIC_EROL_SITE },
-		{ label: 'Vote for Martian', href: PUBLIC_MARTIAN_VOTE },
-		{ label: 'GitHub', href: PUBLIC_MARTIAN_GITHUB },
-		{ label: 'X / Martian Chain', href: PUBLIC_MARTIAN_TWITTER },
-		{ label: 'X / $EROL', href: PUBLIC_EROL_TWITTER }
+		{ label: $_('chain.docs'), href: PUBLIC_MARTIAN_DOCS },
+		{ label: $_('chain.subnetExplorer'), href: PUBLIC_MARTIAN_SUBNET },
+		{ label: $_('chain.martianChainCom'), href: PUBLIC_MARTIAN_SITE },
+		{ label: $_('chain.erolMuskCom'), href: PUBLIC_EROL_SITE },
+		{ label: $_('chain.voteForMartian'), href: PUBLIC_MARTIAN_VOTE },
+		{ label: $_('chain.github'), href: PUBLIC_MARTIAN_GITHUB },
+		{ label: $_('chain.xMartianChain'), href: PUBLIC_MARTIAN_TWITTER },
+		{ label: $_('chain.xErol'), href: PUBLIC_EROL_TWITTER }
 	].filter((link) => Boolean(link.href));
 </script>
 

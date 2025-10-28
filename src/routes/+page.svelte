@@ -51,21 +51,21 @@
 <div class="container grid flex-1 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
 	<div class="list-col">
 		<div class="title">
-			<span>Latest Transactions</span>
-			<a href="/txs" class="btn ml-auto">View All</a>
+			<span>{$_('home.latestTransactions')}</span>
+			<a href="/txs" class="btn ml-auto">{$_('home.viewAll')}</a>
 		</div>
 		<LatestTxsList latestTxs={data.latestTxs} />
 	</div>
 	<div class="list-col">
 		<div class="title">
-			<span>Latest Blocks</span>
-			<a href="/blocks" class="btn ml-auto">View All</a>
+			<span>{$_('home.latestBlocks')}</span>
+			<a href="/blocks" class="btn ml-auto">{$_('home.viewAll')}</a>
 		</div>
 		<LatestBlocksList latestBlocks={data.latestBlocks} />
 	</div>
 	<div class="list-col martian-info">
 		<div class="title">
-			<span>Martian Chain essentials</span>
+			<span>{$_('home.essentials')}</span>
 		</div>
 		<MartianChainInfo />
 	</div>

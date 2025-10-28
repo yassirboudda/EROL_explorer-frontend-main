@@ -2,6 +2,7 @@
 	import SearchIcon from 'virtual:icons/hugeicons/search-02';
 	import {goto} from "$app/navigation";
 	import {ethers} from "ethers";
+	import { _ } from 'svelte-i18n';
 
 	let className = '';
 	export { className as class };
@@ -28,7 +29,7 @@
 <div class="searchbar-wrapper {className}">
 	<input
 		type="search"
-		placeholder="Search by address, tx hash, block, token, ..."
+		placeholder={$_('search.placeholder')}
 		on:keypress={onKeypress}
 		bind:value={query}
 	/>

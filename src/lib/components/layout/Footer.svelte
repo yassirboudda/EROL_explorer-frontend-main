@@ -10,19 +10,20 @@
 		PUBLIC_MARTIAN_SUBNET
 	} from '$env/static/public';
 	import ExternalLink from 'virtual:icons/hugeicons/link-square-02';
+	import { _ } from 'svelte-i18n';
 
 	const spotlightLinks = [
-		{ label: 'MartianChain.com', href: PUBLIC_MARTIAN_SITE },
-		{ label: 'Docs', href: PUBLIC_MARTIAN_DOCS },
-		{ label: 'Subnet Explorer', href: PUBLIC_MARTIAN_SUBNET },
-		{ label: 'Vote for Martian', href: PUBLIC_MARTIAN_VOTE }
+		{ label: $_('chain.martianChainCom'), href: PUBLIC_MARTIAN_SITE },
+		{ label: $_('chain.docs'), href: PUBLIC_MARTIAN_DOCS },
+		{ label: $_('chain.subnetExplorer'), href: PUBLIC_MARTIAN_SUBNET },
+		{ label: $_('chain.voteForMartian'), href: PUBLIC_MARTIAN_VOTE }
 	].filter((link) => Boolean(link.href));
 
 	const communityLinks = [
-		{ label: 'GitHub', href: PUBLIC_MARTIAN_GITHUB },
-		{ label: 'X / Martian Chain', href: PUBLIC_MARTIAN_TWITTER },
-		{ label: 'X / $EROL', href: PUBLIC_EROL_TWITTER },
-		{ label: 'ErolMusk.com', href: PUBLIC_EROL_SITE }
+		{ label: $_('chain.github'), href: PUBLIC_MARTIAN_GITHUB },
+		{ label: $_('chain.xMartianChain'), href: PUBLIC_MARTIAN_TWITTER },
+		{ label: $_('chain.xErol'), href: PUBLIC_EROL_TWITTER },
+		{ label: $_('chain.erolMuskCom'), href: PUBLIC_EROL_SITE }
 	].filter((link) => Boolean(link.href));
 </script>
 
@@ -36,7 +37,7 @@
 					<p class="caption">Martian Chain explorer</p>
 				</div>
 			</div>
-			<p class="tagline">MartianScan brings real-time visibility to blocks, transactions, and contracts across the $EROL ecosystem.</p>
+			<p class="tagline">{$_('footer.tagline')}</p>
 		</div>
 		<div class="footer__links">
 			<div>

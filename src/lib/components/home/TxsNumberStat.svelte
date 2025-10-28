@@ -3,6 +3,7 @@
 	import { beforeNavigate } from '$app/navigation';
 	import TxIcon from 'virtual:icons/hugeicons/arrow-reload-horizontal';
 	import numeral from 'numeral';
+	import { _ } from 'svelte-i18n';
 
 	let isLoading = true;
 	let txsCount = 0;
@@ -35,5 +36,5 @@
 			<div class="stat-value">{txsCount ? numeral(txsCount).format('0,0') : '-'}</div>
 		{/if}
 	</div>
-	<span class="btn ml-auto hover:bg-base-200">View all</span>
+	<span class="btn ml-auto hover:bg-base-200">{$_('home.viewAll')}</span>
 </a>

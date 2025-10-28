@@ -4,6 +4,7 @@
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import FirstVisitBanner from '$lib/components/layout/FirstVisitBanner.svelte';
 	import PagePreloader from '$lib/components/PagePreloader.svelte';
+	import { _ } from 'svelte-i18n';
 
 	let { children } = $props();
 </script>
@@ -14,26 +15,26 @@
 	<meta name="theme-color" content="#ff154e" />
 	<meta
 		name="description"
-		content="MartianScan is the official Martian Chain explorer—track $EROL blocks, transactions, smart contracts, and network analytics in real time."
+		content={$_('meta.description')}
 	/>
 	<meta property="og:site_name" content="MartianScan" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="MartianScan | Martian Chain Explorer" />
+	<meta property="og:title" content={$_('meta.title')} />
 	<meta
 		property="og:description"
-		content="Monitor Martian Chain blocks, transactions, contracts, and on-chain stats with MartianScan."
+		content={$_('meta.ogDescription')}
 	/>
 	<meta property="og:image" content="/og_image.png" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="MartianScan | Martian Chain Explorer" />
+	<meta name="twitter:title" content={$_('meta.title')} />
 	<meta
 		name="twitter:description"
-		content="Monitor Martian Chain blocks, transactions, contracts, and on-chain stats with MartianScan."
+		content={$_('meta.ogDescription')}
 	/>
 	<meta name="twitter:image" content="/og_image.png" />
 	<meta
 		name="keywords"
-		content="MartianScan, Martian Chain Explorer, $EROL blockchain, Martian blockchain explorer, Martian smart contracts"
+		content={$_('meta.keywords')}
 	/>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-403783252"></script>
 	<script>

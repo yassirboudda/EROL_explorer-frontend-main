@@ -5,6 +5,7 @@
 	import { page } from '$app/state';
 	import numeral from 'numeral';
 	import BlockIcon from 'virtual:icons/hugeicons/blockchain-01';
+	import { _ } from 'svelte-i18n';
 
 	let isLoading = true;
 	let latestBlockNumber = 0;
@@ -35,5 +36,5 @@
 			</div>
 		{/if}
 	</div>
-	<span class="btn ml-auto hover:bg-base-200">View all</span>
+	<span class="btn ml-auto hover:bg-base-200">{$_('home.viewAll')}</span>
 </a>

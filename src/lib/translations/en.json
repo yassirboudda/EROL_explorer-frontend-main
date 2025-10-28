@@ -10,7 +10,40 @@
     "transactions": "Transactions",
     "copy": "Copy",
     "copied": "Copied!",
-    "indexingMessage": "This explorer is not fully indexed, which means the following lists may be outdated. However, you can always explore live data by searching for a transaction hash, address, etc."
+    "indexingMessage": "This explorer is not fully indexed, which means the following lists may be outdated. However, you can always explore live data by searching for a transaction hash, address, etc.",
+    "essentials": "Martian Chain essentials",
+    "highlights": "Martian Chain highlights",
+    "latestTransactions": "Latest Transactions",
+    "latestBlocks": "Latest Blocks",
+    "viewAll": "View All"
+  },
+  "chain": {
+    "chainName": "Chain Name",
+    "chainId": "Chain ID",
+    "blockTime": "Block Time",
+    "gasLimit": "Gas Limit",
+    "baseFee": "Base Fee",
+    "nativeToken": "Native Token",
+    "docs": "Docs",
+    "subnetExplorer": "Subnet Explorer",
+    "martianChainCom": "MartianChain.com",
+    "erolMuskCom": "ErolMusk.com",
+    "voteForMartian": "Vote for Martian",
+    "github": "GitHub",
+    "xMartianChain": "X / Martian Chain",
+    "xErol": "X / $EROL"
+  },
+  "footer": {
+    "tagline": "MartianScan brings real-time visibility to blocks, transactions, and contracts across the $EROL ecosystem."
+  },
+  "search": {
+    "placeholder": "Search by address, tx hash, block, token, ..."
+  },
+  "meta": {
+    "title": "MartianScan | Martian Chain Explorer",
+    "description": "MartianScan is the official Martian Chain explorer—track $EROL blocks, transactions, smart contracts, and network analytics in real time.",
+    "ogDescription": "Monitor Martian Chain blocks, transactions, contracts, and on-chain stats with MartianScan.",
+    "keywords": "MartianScan, Martian Chain Explorer, $EROL blockchain, Martian blockchain explorer, Martian smart contracts"
   },
   "languages": {
     "en": "English",
