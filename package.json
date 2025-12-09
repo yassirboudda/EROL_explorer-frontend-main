@@ -37,7 +37,7 @@
 		"vite": "^7.0.4"
 	},
 	"dependencies": {
-		"@shazow/whatsabi": "^0.22.2",
+		"@shazow/whatsabi": "^0.23.0",
 		"@sveltejs/adapter-vercel": "^6.2.0",
 		"chart.js": "^4.5.0",
 		"daisyui": "^5.0.50",
