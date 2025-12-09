@@ -38,7 +38,7 @@
 	},
 	"dependencies": {
 		"@shazow/whatsabi": "^0.22.2",
-		"@sveltejs/adapter-vercel": "^6.2.0",
+		"@sveltejs/adapter-vercel": "^5.10.3",
 		"chart.js": "^4.5.0",
 		"daisyui": "^5.0.50",
 		"ethers": "^6.15.0",
